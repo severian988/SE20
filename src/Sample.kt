@@ -20,7 +20,7 @@ fun isPrime(x:BigInteger): Boolean{
 fun main() {
     // Printing the Rn from 1 to 20 with if it is prime or not
     for (n in 1..20) {
-        var r = ((10.toBigDecimal().pow(n)-1.toBigDecimal()) / 9.toBigDecimal()).toBigInteger()
+        var r = ((10.toBigDecimal().pow(n)) / 9.toBigDecimal()).toBigInteger()
         if (isPrime(n.toBigInteger())) {
             println("R%d - %d %b".format(n, r, isPrime(r)))
         } else{
