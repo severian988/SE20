@@ -1,3 +1,4 @@
+# 11の次のRepunit 素数を見つけるために，src フォルダ内に Sample.kt を作成したが，途中からオーバーフローを起こしてしまい，うまくプログラムが動作していない．これを修正して 11 の次の Repunit 素数を発見できるようにプログラムを拡張したい．誰かいいアイディアないですか？
 import kotlin.math.*
 
 fun isPrime(x:Long): Boolean{
