@@ -1,18 +1,23 @@
+import java.math.BigInteger
 import kotlin.math.*
 
-fun isPrime(x:Long): Boolean{
-    if(x==1L) return false
-
-    for (j in 2L..x / 2) {
-            if (x % j == 0L) {
-                return false
-            }
+fun isPrime(x:BigInteger): Boolean{
+    if(x==1.toBigInteger()) return false
+    if(x==2.toBigInteger()) return true
+    if(x % 2.toBigInteger() == 0.toBigInteger()) return false
+    var j = 3.toBigInteger()
+    while( j <= x.sqrt() ){
+        if (x % j == 0.toBigInteger() ) return false
+        j += 2.toBigInteger()
     }
     return true
 }
+
 fun main() {
+    var nMinusOne = 0.toBigInteger()
     for (i in 1L..20L) {
-        var n = (10.0.pow(i.toDouble()) / 9).toLong()
+        val n = nMinusOne + 1.toBigInteger()
         println("%d %b".format(n, isPrime(n)))
+        nMinusOne = n * 10.toBigInteger()
     }
 }
