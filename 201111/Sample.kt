@@ -1,4 +1,5 @@
 import kotlin.math.*
+import java.math.BigInteger
 
 fun isPrime(x:Long): Boolean{
     if(x==1L) return false
@@ -10,9 +11,33 @@ fun isPrime(x:Long): Boolean{
     }
     return true
 }
+
+fun isPrimeBigInteger(x: BigInteger): Boolean{
+    if (x == 1.toBigInteger()) {
+        return false
+    }
+    if (x == 2.toBigInteger()) {
+        return true
+    }
+    if (x % 2.toBigInteger() == 0.toBigInteger()) {
+        return false
+    }
+
+    var j = 3.toBigInteger()
+    while(j <= x.sqrt()) {
+        if (x % j == 0.toBigInteger()) {
+            return false
+        }
+        j += 2.toBigInteger()
+    }
+    return true
+}
+
 fun main() {
-    for (i in 1L..16L) {
-        var n = (10.0.pow(i.toDouble()) / 9).toLong()
-        println("%d %b".format(n, isPrime(n)))
+    var m = 0.toBigInteger()
+    for (i in 1L..20L) {
+        var n = m + 1.toBigInteger()
+        println("%d %b".format(n, isPrimeBigInteger(n)))
+        m = n * 10.toBigInteger()
     }
 }
