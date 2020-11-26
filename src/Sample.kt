@@ -1,19 +1,86 @@
+import java.math.BigInteger
 import kotlin.math.*
+import kotlin.system.measureTimeMillis
+
+fun checkNum(num: BigInteger): Pair<BigInteger, BigInteger>{
+    var s = 0.toBigInteger()
+    var d = num - 1.toBigInteger()
+
+    while(d % 2.toBigInteger() == 0.toBigInteger()){
+        s++
+        d /= 2.toBigInteger()
+    }
+
+    return Pair(s, d)
+}
+
+fun myPow(x:BigInteger,y:BigInteger,n:BigInteger) : BigInteger{
+    var result = 1.toBigInteger()
+    var a =  x % n
+    var b = y
+
+    while(b > 0.toBigInteger()) {
+        if (b % 2.toBigInteger() == 1.toBigInteger()) {
+            result = (result * a) % n
+        }
+        b /= 2.toBigInteger()
+        a = (a.pow(2)) % n
+    }
+    return result
+}
+
+fun millerTest(d:BigInteger, num:BigInteger, a:BigInteger): Boolean {
+    var x = myPow(a, d, num)
+    if (x == 1.toBigInteger() || x == num - 1.toBigInteger()) return true
+
+    var b = d
+    while (b != num - 1.toBigInteger()) {
+        x = (x.pow(2)) % num
+        b *= 2.toBigInteger()
+        if (x == 1.toBigInteger()) return false
+        if (x == num - 1.toBigInteger()) return true
+    }
+    return false
+}
+
+fun isPrimeRepunit(x:BigInteger): Boolean{
+    if (x <= 1.toBigInteger() || x == 4.toBigInteger()) return false
+    if (x == 2.toBigInteger()) return true
+
+    var a_sample = listOf(2, 3, 5, 7, 11, 13, 17, 31, 61, 73)
+
+    var (s, d) = checkNum(x)
+
+    for (a in a_sample) {
+        if (a.toBigInteger() >= x) break
+        if (!millerTest(d, x, a.toBigInteger())) return false
+    }
+    return true
+}
 
 fun isPrime(x:Long): Boolean{
     if(x==1L) return false
 
-    for (j in 2L..(sqrt(x.toDouble())).toLong()) {
-        if (x % j == 0L) {
-            return false
-        }
+    var j = 2L
+    while(j*j<=x){
+        if (x % j == 0L) return false
+        j++
     }
     return true
 }
+
 fun main() {
-    var n = 0L
-    for(i in 1L..19L){
-        n += (10.0.pow(i.toDouble()-1.0)).toLong()
-        println("%d %b".format(n, isPrime(n)))
+    val time = measureTimeMillis {
+        var n = 1.toBigInteger()
+
+        for (i in 1L..317L) {
+            if(isPrime(i)){
+                println("R_$i %b".format(isPrimeRepunit(n)))
+            }else{
+                println("R_$i false")
+            }
+            n = n * 10.toBigInteger() + 1.toBigInteger()
+        }
     }
+    println("$time ms")
 }
