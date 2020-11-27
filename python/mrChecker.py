@@ -18,7 +18,7 @@ def get_bits(i):
       result += 1
    return result
 
-def power(x, y, n):
+def powmod(x, y, n):
     result = 1
     x = x % n
     i = get_bits(y)
@@ -40,7 +40,7 @@ def myPow(x,y,n):
     return result
 
 def miillerTest(d, num, a):
-    x = power(a, d, num)
+    x = powmod(a, d, num)
     if (x == 1 or x == num-1):
         return True
     while(d != num-1):
