@@ -11,6 +11,24 @@ def checkNum(num):
     assert(2**s*d == num-1)
     return [s,d]
 
+def get_bits(i):
+   result = 0
+   while i:
+      i >>= 1
+      result += 1
+   return result
+
+def power(x, y, n):
+    result = 1
+    x = x % n
+    i = get_bits(y)
+    while i >= 0:
+        result = (result * result) % n
+        if (y >> i) & 1:
+            result = (result * x) % n
+        i -= 1
+    return result
+
 def myPow(x,y,n):
     result = 1
     x=x%n
@@ -22,7 +40,7 @@ def myPow(x,y,n):
     return result
 
 def miillerTest(d, num, a):
-    x = myPow(a, d, num)
+    x = power(a, d, num)
     if (x == 1 or x == num-1):
         return True
     while(d != num-1):
