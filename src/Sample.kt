@@ -29,8 +29,23 @@ fun myPow(x:BigInteger,y:BigInteger,n:BigInteger) : BigInteger{
     return result
 }
 
+fun binPow(x:BigInteger,y:BigInteger,n:BigInteger) : BigInteger{
+    var result = 1.toBigInteger()
+    var a = x % n
+    var b = y
+    while (b > 0.toBigInteger()){
+        if (b and 1.toBigInteger() == 1.toBigInteger()){
+            result *= a
+            result %= n
+        }
+        b = b.shiftRight(1)
+        a = (a * a) % n
+    }
+    return result
+}
+
 fun millerTest(d:BigInteger, num:BigInteger, a:BigInteger): Boolean {
-    var x = myPow(a, d, num)
+    var x = binPow(a, d, num)
     if (x == 1.toBigInteger() || x == num - 1.toBigInteger()) return true
 
     var b = d
