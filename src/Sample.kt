@@ -13,14 +13,11 @@ fun isPrime(x:BigInteger): Boolean{
     return true
 }
 fun main() {
-    var nMinusOne = 0.toBigInteger()
-    for (i in 1L..22L) {
-        val n = nMinusOne + 1.toBigInteger()
-        var ans = false
-        if( isPrime(n.toString().length.toBigInteger()) ){
-            ans = isPrime(n)
-        }
-        println("%d %b".format(n,ans) )
-        nMinusOne = n * 10.toBigInteger()
+    var n = BigInteger.ONE
+    val checker = Checker()
+    for (i in 1L..400L) {
+        var ans = checker.isRepunitPrime(i,n)
+        println("R_%d %b".format(i,ans) )
+        n = n * BigInteger.valueOf(10) + BigInteger.ONE
     }
 }
