@@ -33,7 +33,7 @@ fun main() {
 
         //Once all repunits were tested, print final results :
         println("\n Prime repunits found are : :")
-        for(i in 1..primeRepunits.size-1){
+        for(i in 0..primeRepunits.size-1){
             println("R_${primeRepunits[i]} is prime")
         }
     }
