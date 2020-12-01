@@ -31,10 +31,24 @@ class CheckerTest {
         }
         println("Test002 is OK!")
     }
+
+    /**
+     * @author Johan 2020/12/01
+     * Check if the Euler–Jacobi pseudoprimes under than 100000 for bases 10 are not a prime number.
+     */
+    fun CheckerTest03(){
+        val cnum = listOf(9L, 91L, 481L, 1729L, 4187L, 6533L, 6601L, 8149L, 8401L, 10001L, 11111L, 11169L, 11649L, 12801L, 15841L, 19201L, 20961L, 21931L, 24013L, 34441L, 41041L, 50851L, 50881L, 63973L, 69921L, 75361L, 79003L, 83119L, 94139L, 95161L, 97681L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test003 is OK!")
+    }
 }
 
 fun main(args: Array<String>){
     var ctest = CheckerTest()
     ctest.CheckerTest01()
     ctest.CheckerTest02()
+    ctest.CheckerTest03()
 }
