@@ -1,7 +1,7 @@
 import kotlin.math.*
 import java.math.BigInteger
 
-fun isPrime(x:Long): Boolean{
+fun _isPrime(x:Long): Boolean{
     if(x==1L) return false
 
     for (j in 2L..x / 2) {
@@ -24,7 +24,7 @@ fun isPrimeBigInteger(x: BigInteger): Boolean{
     }
 
     var j = 3.toBigInteger()
-    while(j <= x.sqrt()) {
+    while(j <= x) {
         if (x % j == 0.toBigInteger()) {
             return false
         }
