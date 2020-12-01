@@ -30,7 +30,7 @@
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="15" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="CheckerTestKt" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -56,17 +56,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="664" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606845436552">
+    <state x="664" y="92" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606846548254">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606845436552" />
-    <state x="939" y="227" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606845435382">
+    <state x="664" y="92" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606846548254" />
+    <state x="505" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1606846447736">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="939" y="227" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606845435382" />
+    <state x="505" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606846447736" />
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606842810550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606842810550" />
+    <state width="1874" height="281" key="GridCell.Tab.0.bottom" timestamp="1606846587886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606846587886" />
+    <state width="1874" height="281" key="GridCell.Tab.0.center" timestamp="1606846587886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606846587886" />
+    <state width="1874" height="281" key="GridCell.Tab.0.left" timestamp="1606846587886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606846587886" />
+    <state width="1874" height="281" key="GridCell.Tab.0.right" timestamp="1606846587886">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1874" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606846587886" />
   </component>
 </project>
