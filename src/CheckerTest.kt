@@ -44,6 +44,19 @@ class CheckerTest {
         }
         println("Test003 is OK!")
     }
+
+    /**
+     * @author Nanai Kouki 2020/12/02
+     * 強いリュカ擬素数20個（Strong Lucas pseudoprimes）.
+     */
+    fun CheckerTest04(){
+        val cnum = listOf(5459L, 5777L, 10877L, 16109L, 18971L, 22499L, 24569L, 25199L, 40309L, 58519L, 75077L, 97439L, 100127L, 113573L, 115639L, 130139L, 155819L, 158399L, 161027L, 162133L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test004 is OK!")
+    }
 }
 
 fun main(args: Array<String>){
@@ -51,4 +64,5 @@ fun main(args: Array<String>){
     ctest.CheckerTest01()
     ctest.CheckerTest02()
     ctest.CheckerTest03()
+    ctest.CheckerTest04()
 }
