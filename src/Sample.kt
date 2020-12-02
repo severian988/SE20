@@ -1,6 +1,7 @@
 import java.math.BigInteger
 import kotlin.math.*
 import kotlin.system.measureTimeMillis
+<<<<<<< HEAD
 
 fun checkNum(num: BigInteger): Pair<BigInteger, BigInteger>{
     var s = 0.toBigInteger()
@@ -74,10 +75,15 @@ fun isPrimeRepunit(x:BigInteger): Boolean{
     }
     return true
 }
+=======
+>>>>>>> 49c46b7c1d5d7d83e6aaa5cf0d6703abd1125cbf
 
-fun isPrime(x:Long): Boolean{
-    if(x==1L) return false
+fun main() {
+    val checker = Checker()
+    val time = measureTimeMillis {
+        var n = 1.toBigInteger()
 
+<<<<<<< HEAD
     var j = 2L
     while(j*j<=x){
         if (x % j == 0L) return false
@@ -99,5 +105,16 @@ fun main() {
             n = n * 10.toBigInteger() + 1.toBigInteger()
         }
     }
+=======
+        for (i in 1L..317L) {
+            if(checker.isPrime(i)){
+                println("R_$i %b".format(checker.isPrimeRepunit(n)))
+            }else{
+                println("R_$i false")
+            }
+            n = n * 10.toBigInteger() + 1.toBigInteger()
+        }
+    }
+>>>>>>> 49c46b7c1d5d7d83e6aaa5cf0d6703abd1125cbf
     println("$time ms")
 }
