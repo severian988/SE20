@@ -44,7 +44,7 @@ def isPrime(num):
     return True
 
 if __name__ == "__main__":
-    for i in range(24):
+    for i in range(5):
         tmp = (10**i-1)//9
         print(tmp,isPrime(tmp))
         
