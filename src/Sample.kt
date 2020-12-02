@@ -1,111 +1,13 @@
 import java.math.BigInteger
 import kotlin.math.*
 import kotlin.system.measureTimeMillis
-<<<<<<< HEAD
-
-fun checkNum(num: BigInteger): Pair<BigInteger, BigInteger>{
-    var s = 0.toBigInteger()
-    var d = num - 1.toBigInteger()
-
-    while(d % 2.toBigInteger() == 0.toBigInteger()){
-        s++
-        d /= 2.toBigInteger()
-    }
-
-    return Pair(s, d)
-}
-
-fun myPow(x:BigInteger,y:BigInteger,n:BigInteger) : BigInteger{
-    var result = 1.toBigInteger()
-    var a =  x % n
-    var b = y
-
-    while(b > 0.toBigInteger()) {
-        if (b % 2.toBigInteger() == 1.toBigInteger()) {
-            result = (result * a) % n
-        }
-        b /= 2.toBigInteger()
-        a = (a.pow(2)) % n
-    }
-    return result
-}
-
-fun binPow(x:BigInteger,y:BigInteger,n:BigInteger) : BigInteger{
-    var result = 1.toBigInteger()
-    var a = x % n
-    var b = y
-    while (b > 0.toBigInteger()){
-        if (b and 1.toBigInteger() == 1.toBigInteger()){
-            result *= a
-            result %= n
-        }
-        b = b.shiftRight(1)
-        a = (a * a) % n
-        println(b)
-        println(a)
-    }
-    return result
-}
-
-fun millerTest(d:BigInteger, num:BigInteger, a:BigInteger): Boolean {
-    var x = binPow(a, d, num)
-    if (x == 1.toBigInteger() || x == num - 1.toBigInteger()) return true
-
-    var b = d
-    while (b != num - 1.toBigInteger()) {
-        x = (x.pow(2)) % num
-        b *= 2.toBigInteger()
-        if (x == 1.toBigInteger()) return false
-        if (x == num - 1.toBigInteger()) return true
-    }
-    return false
-}
-
-fun isPrimeRepunit(x:BigInteger): Boolean{
-    if (x <= 1.toBigInteger() || x == 4.toBigInteger()) return false
-    if (x == 2.toBigInteger()) return true
-
-    var a_sample = listOf(2, 3, 5, 7, 11, 13, 17, 31, 61, 73)
-
-    var (s, d) = checkNum(x)
-
-    for (a in a_sample) {
-        if (a.toBigInteger() >= x) break
-        if (!millerTest(d, x, a.toBigInteger())) return false
-    }
-    return true
-}
-=======
->>>>>>> 49c46b7c1d5d7d83e6aaa5cf0d6703abd1125cbf
 
 fun main() {
+    println("sdd")
     val checker = Checker()
     val time = measureTimeMillis {
         var n = 1.toBigInteger()
 
-<<<<<<< HEAD
-    var j = 2L
-    while(j*j<=x){
-        if (x % j == 0L) return false
-        j++
-    }
-    return true
-}
-
-fun main() {
-    val time = measureTimeMillis {
-        var n = 1.toBigInteger()
-
-        for (i in 1L..10L) {
-            if(isPrime(i)){
-                println("R_$i %b".format(isPrimeRepunit(n)))
-            }else{
-                println("R_$i false")
-            }
-            n = n * 10.toBigInteger() + 1.toBigInteger()
-        }
-    }
-=======
         for (i in 1L..317L) {
             if(checker.isPrime(i)){
                 println("R_$i %b".format(checker.isPrimeRepunit(n)))
@@ -115,6 +17,5 @@ fun main() {
             n = n * 10.toBigInteger() + 1.toBigInteger()
         }
     }
->>>>>>> 49c46b7c1d5d7d83e6aaa5cf0d6703abd1125cbf
     println("$time ms")
 }
