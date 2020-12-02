@@ -3,7 +3,6 @@ import kotlin.math.*
 import kotlin.system.measureTimeMillis
 
 fun main() {
-    println("sdd")
     val checker = Checker()
     val time = measureTimeMillis {
         var n = 1.toBigInteger()
