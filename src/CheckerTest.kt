@@ -65,6 +65,18 @@ class CheckerTest {
         assertEquals(c_.binPow(111111111.toBigInteger(),11111111111.toBigInteger(),1000000007.toBigInteger()),249517433.toBigInteger())
         println("Test005 is OK!")
     }
+    /**
+     * @author kojima 2020/12/02
+     *カタラン素数3つ (Catalan pseudoprimes)
+     */
+    fun CheckerTest05(){
+        val cnum = listOf(5907L, 1194649L, 12327121L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test006 is OK!")
+    }
 }
 
 fun main(args: Array<String>){
@@ -74,4 +86,5 @@ fun main(args: Array<String>){
     ctest.CheckerTest03()
     ctest.CheckerTest04()
     ctest.binPowTest01()
+    ctest.CheckerTest05()
 }
