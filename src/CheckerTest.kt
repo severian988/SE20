@@ -77,6 +77,7 @@ class CheckerTest {
         }
         println("Test006 is OK!")
     }
+
 }
 
 fun main(args: Array<String>){
