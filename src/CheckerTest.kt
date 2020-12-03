@@ -100,10 +100,10 @@ class CheckerTest {
 
     /**
      * @author Takumi Maeda 2020/12/03
-     * Check Chen prime more than 100 and less than 200 are not a prime number.
+     * Check Perrin pseudoprimes less than 1000000 are not a prime number.
      */
     fun CheckerTest10(){
-        val cnum = listOf(101L, 107L, 109L, 113L, 127L, 131L, 137L, 139L, 149L, 157L, 167L, 179L, 181L, 191L, 197L, 199L)
+        val cnum = listOf(271441L, 904631L)
         for (num in cnum){
             assertFalse { c_.isPrime(num) }
             assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
