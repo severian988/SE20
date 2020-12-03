@@ -124,6 +124,19 @@ class CheckerTest {
         println("Test010 is OK!")
     }
 
+    /**
+     * @author Kosei Nagasawa 2020/12/04
+     * Check Cipolla pseudoprimes from 1st to 9th
+     */
+    fun CheckerTest11(){
+      val cnum = listOf(341L, 5461L, 1398101L, 22369621L, 5726623061L, 91625968981L, 23456248059221L, 96076792050570581L)
+      for (num in cnum){
+          assertFalse { c_.isPrime(num) }
+          assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+      }
+      println("Test011 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
