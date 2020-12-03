@@ -98,6 +98,19 @@ class CheckerTest {
         println("Test008 is OK!")
     }
 
+    /**
+     * @author Takumi Maeda 2020/12/03
+     * Check Chen prime more than 100 and less than 200 are not a prime number.
+     */
+    fun CheckerTest10(){
+        val cnum = listOf(101L, 107L, 109L, 113L, 127L, 131L, 137L, 139L, 149L, 157L, 167L, 179L, 181L, 191L, 197L, 199L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test010 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
@@ -116,5 +129,6 @@ fun main(args: Array<String>){
     ctest.CheckerTest05()
     ctest.CheckerTest06()
     ctest.CheckerTest08()
+    ctest.CheckerTest10()
     ctest.binPowTest01()
 }
