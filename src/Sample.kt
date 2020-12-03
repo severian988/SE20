@@ -1,23 +1,21 @@
-// import kotlin.math.*
 import java.math.BigInteger
+import kotlin.math.*
+import kotlin.system.measureTimeMillis
 
-fun isPrime(x:BigInteger): Boolean{
-    if(x==1.toBigInteger()) return false
-    if(x==2.toBigInteger()) return true
-    if(x % 2.toBigInteger() == 0.toBigInteger()) return false
-    for (i in 3L..x.sqrt().toLong() step 2L){
-        if(x % i.toBigInteger() == 0.toBigInteger()){
-            return false
+fun main() {
+    val checker = Checker()
+    val time = measureTimeMillis {
+        var n = 1.toBigInteger()
+
+        for (i in 1L..317L) {
+            if(checker.isPrime(i)){
+                println("R_$i %b".format(checker.isPrimeRepunit(n)))
+            }else{
+                println("R_$i false")
+            }
+            n = n * 10.toBigInteger() + 1.toBigInteger()
         }
     }
-    return true
+    println("$time ms")
 }
-fun main() {
-    var n = BigInteger.ONE
-    val checker = Checker()
-    for (i in 1L..400L) {
-        var ans = checker.isRepunitPrime(i,n)
-        println("R_%d %b".format(i,ans) )
-        n = n * BigInteger.valueOf(10) + BigInteger.ONE
-    }
-}
+
