@@ -129,6 +129,5 @@ fun main(args: Array<String>){
     ctest.CheckerTest05()
     ctest.CheckerTest06()
     ctest.CheckerTest08()
-    ctest.CheckerTest10()
     ctest.binPowTest01()
 }
