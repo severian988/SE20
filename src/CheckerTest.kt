@@ -86,6 +86,19 @@ class CheckerTest {
     }
 
     /**
+     * @author Riku Iikura 2020/12/03
+     * Check the Fermat pseudoprimes to base 2, also called Sarrus numbers or Poulet numbers.
+     */
+    fun CheckerTest07(){
+        val cnum = listOf(341L, 561L, 645L, 1105L, 1387L, 1729L, 1905L, 2047L, 2465L, 2701L, 2821L, 3277L, 4033L, 4369L, 4371L, 4681L, 5461L, 6601L, 7957L, 8321L, 8481L, 8911L, 10261L, 10585L, 11305L, 12801L, 13741L, 13747L, 13981L, 14491L, 15709L, 15841L, 16705L, 18705L, 18721L, 19951L, 23001L, 23377L, 25761L, 29341L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test007 is OK!")
+    }
+
+    /**
      * @author Takumi Nakai 2020/12/03
      * Check Grothendieck prime is not a prime number.
      */
@@ -96,6 +109,19 @@ class CheckerTest {
             assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
         }
         println("Test008 is OK!")
+    }
+
+    /**
+     * @author Takumi Maeda 2020/12/03
+     * Check Perrin pseudoprimes less than 1000000 are not a prime number.
+     */
+    fun CheckerTest10(){
+        val cnum = listOf(271441L, 904631L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test010 is OK!")
     }
 
     fun binPowTest01(){
@@ -115,6 +141,5 @@ fun main(args: Array<String>){
     ctest.CheckerTest04()
     ctest.CheckerTest05()
     ctest.CheckerTest06()
-    ctest.CheckerTest08()
     ctest.binPowTest01()
 }
