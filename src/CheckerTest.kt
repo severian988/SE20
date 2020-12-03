@@ -98,6 +98,19 @@ class CheckerTest {
         println("Test008 is OK!")
     }
 
+    /**
+     * @author Takumi Maeda 2020/12/03
+     * Check Perrin pseudoprimes less than 1000000 are not a prime number.
+     */
+    fun CheckerTest10(){
+        val cnum = listOf(271441L, 904631L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test010 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
