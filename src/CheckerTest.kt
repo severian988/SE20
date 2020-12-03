@@ -73,6 +73,19 @@ class CheckerTest {
     }
 
     /**
+     * @author Takumi Nakai 2020/12/03
+     * Check Grothendieck prime is not a prime number.
+     */
+    fun CheckerTest08(){
+        val cnum = listOf(57L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test008 is OK!")
+    }
+  
+    /**
      * @author Amiya Tomoaki 2020/12/03
      * Check the Euler elliptic Carmichael numbers for the elliptic curve y^2 = x^3 + 80 under 100000 are not a prime number.
      */
@@ -84,13 +97,14 @@ class CheckerTest {
         }
         println("Test009 is OK!")
     }
-
+      
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
         assertEquals(c_.binPow(111111111.toBigInteger(),11111111111.toBigInteger(),1000000007.toBigInteger()),249517433.toBigInteger())
         println("Test005 is OK!")
     }
+
 }
 
 fun main(args: Array<String>){
@@ -100,6 +114,7 @@ fun main(args: Array<String>){
     ctest.CheckerTest03()
     ctest.CheckerTest04()
     ctest.CheckerTest06()
+    ctest.CheckerTest08()
     ctest.CheckerTest09()
     ctest.binPowTest01()
 }
