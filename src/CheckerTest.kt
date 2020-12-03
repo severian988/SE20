@@ -76,13 +76,13 @@ class CheckerTest {
      * @author Amiya Tomoaki 2020/12/03
      * Check the Euler elliptic Carmichael numbers for the elliptic curve y^2 = x^3 + 80 under 100000 are not a prime number.
      */
-    fun CheckerTest08(){
+    fun CheckerTest09(){
         val cnum = listOf(481L, 1679L, 1763L, 3599L, 4991L, 5183L, 6119L, 7859L, 9271L, 9407L, 9599L, 18239L, 24119L, 24511L, 24803L, 31919L, 38111L, 38999L, 46079L, 56159L, 57599L, 58463L, 62863L, 63503L, 67199L, 72899L, 82679L)
         for (num in cnum){
             assertFalse { c_.isPrime(num) }
             assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
         }
-        println("Test008 is OK!")
+        println("Test009 is OK!")
     }
 
     fun binPowTest01(){
@@ -100,6 +100,6 @@ fun main(args: Array<String>){
     ctest.CheckerTest03()
     ctest.CheckerTest04()
     ctest.CheckerTest06()
-    ctest.CheckerTest08()
+    ctest.CheckerTest09()
     ctest.binPowTest01()
 }
