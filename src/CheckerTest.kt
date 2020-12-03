@@ -60,6 +60,19 @@ class CheckerTest {
     }
 
     /**
+     * @author kojima 2020/12/02
+     *カタラン素数3つ (Catalan pseudoprimes)
+     */
+    fun CheckerTest05(){
+        val cnum = listOf(5907L, 1194649L, 12327121L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test008 is OK!")
+    }
+
+    /**
      * @author Taiki Hanada 2020/12/03
      * Check the Frobenius pseudoprimes with respect to Fibonacci polynomial x^2 - x - 1 are not a prime number.
      */
@@ -100,6 +113,7 @@ fun main(args: Array<String>){
     ctest.CheckerTest02()
     ctest.CheckerTest03()
     ctest.CheckerTest04()
+    ctest.CheckerTest05()
     ctest.CheckerTest06()
     ctest.CheckerTest08()
     ctest.binPowTest01()
