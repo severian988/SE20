@@ -72,12 +72,26 @@ class CheckerTest {
         println("Test006 is OK!")
     }
 
+    /**
+     * @author Takumi Nakai 2020/12/03
+     * Check Grothendieck prime is not a prime number.
+     */
+    fun CheckerTest08(){
+        val cnum = listOf(57L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test008 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
         assertEquals(c_.binPow(111111111.toBigInteger(),11111111111.toBigInteger(),1000000007.toBigInteger()),249517433.toBigInteger())
         println("Test005 is OK!")
     }
+
 }
 
 fun main(args: Array<String>){
@@ -87,5 +101,6 @@ fun main(args: Array<String>){
     ctest.CheckerTest03()
     ctest.CheckerTest04()
     ctest.CheckerTest06()
+    ctest.CheckerTest08()
     ctest.binPowTest01()
 }
