@@ -59,8 +59,6 @@ class CheckerTest {
         println("Test004 is OK!")
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @author Taiki Hanada 2020/12/03
      * Check the Frobenius pseudoprimes with respect to Fibonacci polynomial x^2 - x - 1 are not a prime number.
@@ -74,7 +72,19 @@ class CheckerTest {
         println("Test006 is OK!")
     }
 
->>>>>>> main
+    /**
+     * @author Amiya Tomoaki 2020/12/03
+     * Check the Euler elliptic Carmichael numbers for the elliptic curve y^2 = x^3 + 80 under 100000 are not a prime number.
+     */
+    fun CheckerTest08(){
+        val cnum = listOf(481L, 1679L, 1763L, 3599L, 4991L, 5183L, 6119L, 7859L, 9271L, 9407L, 9599L, 18239L, 24119L, 24511L, 24803L, 31919L, 38111L, 38999L, 46079L, 56159L, 57599L, 58463L, 62863L, 63503L, 67199L, 72899L, 82679L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test008 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
@@ -89,9 +99,7 @@ fun main(args: Array<String>){
     ctest.CheckerTest02()
     ctest.CheckerTest03()
     ctest.CheckerTest04()
-<<<<<<< HEAD
-=======
     ctest.CheckerTest06()
->>>>>>> main
+    ctest.CheckerTest08()
     ctest.binPowTest01()
 }
