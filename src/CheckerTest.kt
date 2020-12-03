@@ -59,6 +59,22 @@ class CheckerTest {
         println("Test004 is OK!")
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @author Taiki Hanada 2020/12/03
+     * Check the Frobenius pseudoprimes with respect to Fibonacci polynomial x^2 - x - 1 are not a prime number.
+     */
+    fun CheckerTest06(){
+        val cnum = listOf(4181L, 5777L, 6721L, 10877L, 13201L, 15251L, 34561L, 51841L, 64079L, 64681L, 67861L, 68251L, 75077L, 90061L, 96049L, 97921L, 100127L, 113573L, 118441L, 146611L, 161027L, 162133L, 163081L, 186961L, 197209L, 219781L, 231703L, 252601L, 254321L, 257761L, 268801L, 272611L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test006 is OK!")
+    }
+
+>>>>>>> main
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
@@ -73,5 +89,9 @@ fun main(args: Array<String>){
     ctest.CheckerTest02()
     ctest.CheckerTest03()
     ctest.CheckerTest04()
+<<<<<<< HEAD
+=======
+    ctest.CheckerTest06()
+>>>>>>> main
     ctest.binPowTest01()
 }
