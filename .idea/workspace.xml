@@ -2,47 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab559ee-477f-4551-8541-62eacb1302fc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-reflect.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-test-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-test.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest01$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest01$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest02$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest02$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest03$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest$CheckerTest03$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SE20/CheckerTestKt.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/python/mrChecker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/se20kojima/mem.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CheckerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/201111/Sample.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SE20.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SE20.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE20/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE20/Checker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE20/META-INF/SE20.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE20/META-INF/SE20.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE20/SampleKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE20/SampleKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/Checker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/CheckerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/META-INF/SE20.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/Sample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/SampleKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/SE20/SampleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Checker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Checker.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sample.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sample.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CheckerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CheckerTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
