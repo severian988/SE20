@@ -1,5 +1,6 @@
 import java.math.BigInteger
 
+
 class Checker {
     fun checkNum(num: BigInteger): Pair<BigInteger, BigInteger>{
         var s = 0.toBigInteger()
@@ -11,21 +12,6 @@ class Checker {
         }
 
         return Pair(s, d)
-    }
-
-    fun myPow(x: BigInteger, y: BigInteger, n: BigInteger) : BigInteger {
-        var result = 1.toBigInteger()
-        var a =  x % n
-        var b = y
-
-        while(b > 0.toBigInteger()) {
-            if (b % 2.toBigInteger() == 1.toBigInteger()) {
-                result = (result * a) % n
-            }
-            b /= 2.toBigInteger()
-            a = (a.pow(2)) % n
-        }
-        return result
     }
 
     fun binPow(x: BigInteger, y: BigInteger, n: BigInteger) : BigInteger {
