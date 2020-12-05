@@ -149,6 +149,19 @@ class CheckerTest {
       }
       println("Test011 is OK!")
     }
+    
+      /**
+     *  @author Edwin Brossette 2020/12/05
+     * Check the 18th first super-Poulet numbers with more than two different prime factors .
+     */
+    fun CheckerTest12(){
+        val cnum = listOf(294409L, 1398101L, 1549411L, 1840357L, 12599233L, 13421773L, 15162941L, 15732721L, 28717483L, 29593159L, 61377109L, 66384121L, 67763803L, 74658629L, 78526729L, 90341197L, 96916279L, 109322501L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test012 is OK!")
+    }
 
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
@@ -169,5 +182,8 @@ fun main(args: Array<String>){
     ctest.CheckerTest06()
     ctest.CheckerTest08()
     ctest.CheckerTest09()
+    ctest.CheckerTest10()
+    ctest.CheckerTest11()
+    ctest.CheckerTest12()
     ctest.binPowTest01()
 }
