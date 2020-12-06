@@ -5,19 +5,20 @@ fun main() {
     val time = measureTimeMillis {
 
         val i_min = 49081L   //Lower bound
-        val i_max = 49085L   //Upper bound
+        val i_max = 49081L   //Upper bound
         var n = (10.toBigInteger().pow((i_min).toInt())-1.toBigInteger()).divide(9.toBigInteger())
 
         var primeRepunits = mutableListOf<Long>()
 
         for (i in i_min..i_max) {
             if(checker.isPrime(i)){
-                //println("R_$i %b".format(checker.isPrimeRepunit(n)))
+                // println("R_$i %b".format(checker.isPrimeRepunit(n)))
+                print(checker.isPrimeRepunit(n))
                 if(checker.isPrimeRepunit(n)){
                     primeRepunits.add(i) //Add index of repunit n
                 }
             }else{
-                //println("R_$i false")
+                // println("R_$i false")
             }
             n = n * 10.toBigInteger() + 1.toBigInteger()
 
@@ -34,4 +35,22 @@ fun main() {
         }
     }
     println("\n Resolved in : $time ms")
+}
+
+
+fun hoge() {
+    val checker = Checker()
+    val time = measureTimeMillis {
+        var n = 1.toBigInteger()
+
+        for (i in 1L..2000L) {
+            if(checker.isPrime(i)){
+                println("R_$i %b".format(checker.isPrimeRepunit(n)))
+            }else{
+                println("R_$i false")
+            }
+            n = n * 10.toBigInteger() + 1.toBigInteger()
+        }
+    }
+    println("$time ms")
 }

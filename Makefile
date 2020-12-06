@@ -4,7 +4,7 @@ build:
 
 .PHONY: compile
 compile:
-	docker-compose run kt kotlinc Sample.kt
+	docker-compose run kt kotlinc Sample.kt Checker.kt
 	
 .PHONY: run 
 run:

@@ -23,6 +23,7 @@ def myPow(x,y,n):
 
 def miillerTest(d, num, a):
     x = myPow(a, d, num)
+    print(x)
     if (x == 1 or x == num-1):
         return True
     while(d != num-1):
@@ -44,8 +45,10 @@ def isPrime(num):
     return True
 
 if __name__ == "__main__":
-    for i in range(24):
-        tmp = (10**i-1)//9
-        print(tmp,isPrime(tmp))
+    # for i in range(24):
+    i = 49081
+    tmp = (10**i-1)//9
+    print(tmp)
+    print(tmp,isPrime(tmp))
         
 
