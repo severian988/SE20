@@ -176,6 +176,19 @@ class CheckerTest {
         println("Test013 is OK!")
     }
 
+    /**
+     * @author Naoki Motoyama 2020/12/07
+     * Check the Narcissistic Numbers from 3 to 10 digits. 
+     */
+    fun CheckerTest14() {
+        val cnum = listOf(153L, 370L, 371L, 407L, 1634L, 8208L, 9478L, 54748L, 92727L, 93084L, 548834L, 1741725L, 4210818L, 9800817L, 9926315L, 24678050L, 24678051L, 88593477L, 146511208L, 472335975L, 534494836L, 912985153L, 4679307774L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test014 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
@@ -199,5 +212,6 @@ fun main(args: Array<String>){
     ctest.CheckerTest11()
     ctest.CheckerTest12()
     ctest.CheckerTest13()
+    ctest.CheckerTest14()
     ctest.binPowTest01()
 }
