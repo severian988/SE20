@@ -163,6 +163,19 @@ class CheckerTest {
         println("Test012 is OK!")
     }
 
+      /**
+     *  @author Wataru 2020/12/07
+     * Check perfect number less than 10000 are not a prime number.
+     */
+    fun CheckerTest13(){
+        val cnum = listOf(6L, 28L, 496L, 8128L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test013 is OK!")
+    }
+
     fun binPowTest01(){
         assertEquals(c_.binPow(2.toBigInteger(),9.toBigInteger(),1000.toBigInteger()),512.toBigInteger())
         assertEquals(c_.binPow(6.toBigInteger(),5.toBigInteger(),31.toBigInteger()),26.toBigInteger())
@@ -185,5 +198,6 @@ fun main(args: Array<String>){
     ctest.CheckerTest10()
     ctest.CheckerTest11()
     ctest.CheckerTest12()
+    ctest.CheckerTest13()
     ctest.binPowTest01()
 }
