@@ -195,7 +195,18 @@ class CheckerTest {
         assertEquals(c_.binPow(111111111.toBigInteger(),11111111111.toBigInteger(),1000000007.toBigInteger()),249517433.toBigInteger())
         println("Test005 is OK!")
     }
-
+    /**
+     *  @author Mie Hayashi 2020/12/08
+     * Check first six integer multiples of the cyclic number "142857" are not a prime number.
+     */
+    fun CheckerTest15(){
+        val cnum = listOf(142857L, 285714L, 428571L, 571428L, 714285L, 857142L)
+        for (num in cnum){
+            assertFalse { c_.isPrime(num) }
+            assertFalse { c_.isPrimeRepunit(num.toBigInteger()) }
+        }
+        println("Test015 is OK!")
+    }
 }
 
 fun main(args: Array<String>){
@@ -214,4 +225,5 @@ fun main(args: Array<String>){
     ctest.CheckerTest13()
     ctest.CheckerTest14()
     ctest.binPowTest01()
+    ctest.CheckerTest15()
 }
